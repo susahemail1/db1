@@ -8,6 +8,6 @@ export default async function handler(req, res) {
         database: process.env.DB_NAME
     });
 
-    const [rows] = await db.execute("SELECT * FROM ndb1.ndb1 limit 10");
+    const [rows] = await db.execute("SELECT * FROM ndb1 limit 10");
     res.status(200).json(rows);
 }
